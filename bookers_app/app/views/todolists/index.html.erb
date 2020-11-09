@@ -1,3 +1,3 @@
 <% @lists.each do |list| %>
-  Title: <span><%= list.title %></span>
+  Title: <span><%= link_to list.title, todolist_path(list.id) %></span>
 <% end %>
