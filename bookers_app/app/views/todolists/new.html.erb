@@ -1,4 +1,11 @@
-<h1>New book</h1>
+<p id="notice"></p>
+<h1>Books</h1>
+<% @lists.each do |list| %>
+  Title: <span><%= link_to list.title, todolist_path(list.id) %></span>
+  Body: <span><%= link_to list.body, todolist_path(list.id) %></span>
+<% end %>
+
+<h2>New book</h2>
 <%= form_with model: @list, url:'/todolists', local:true do |f| %>
   <h6>Title</h6>
   <%= f.text_field :title %>

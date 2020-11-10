@@ -1,3 +1,4 @@
 <% @lists.each do |list| %>
   Title: <span><%= link_to list.title, todolist_path(list.id) %></span>
+  Body: <span><%= link_to list.body, todolist_path(list.id) %></span>
 <% end %>
