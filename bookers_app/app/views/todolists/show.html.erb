@@ -1,2 +1,3 @@
  <p>Title: <%= @list.title %></p>
  <p>Body: <%= @list.body %></p>
+ <%= link_to "Edit", edit_todolist_path(@list.id) %>
