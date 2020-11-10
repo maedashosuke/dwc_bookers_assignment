@@ -1,3 +1,4 @@
  <p>Title: <%= @list.title %></p>
  <p>Body: <%= @list.body %></p>
  <%= link_to "Edit", edit_todolist_path(@list.id) %>
+ <%= link_to "Destroy", destroy_todolist_path(@list.id), method: :delete, "data-confirm" => "Are you sure?" %>
