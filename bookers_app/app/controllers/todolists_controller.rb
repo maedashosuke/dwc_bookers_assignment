@@ -1,6 +1,7 @@
 class TodolistsController < ApplicationController
   def new
     @list = List.new
+    @lists = List.all
   end
 
   def create
